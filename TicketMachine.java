@@ -54,7 +54,39 @@ public class TicketMachine
     {
         balance = balance + amount;
     }
-
+    
+    /**
+     * Informa al cliene sobre el precio del billete
+     */
+    public void showPrice()
+    {
+        System.out.println("# The price of a ticket is " + price + " cents. ");
+    }
+    
+    /**
+     * Permite incrementar la puntuacion con el numero de puntos indicados
+     */
+    public void insertMonney(int amount)
+    {
+     balance = balance + amount;   
+    }
+    
+    /**
+     * Reducir el precio del billete en la cantidad que se pasa como parametro
+     */
+    public void discount(int amount)
+    {
+        price = price - amount;
+    }
+    
+    /**
+     * Saca un mensaje por pantalla
+     */
+    public void prompt()
+    {
+        System.out.println("Inserta la cantidad correcta de dinero");
+    }
+    
     /**
      * Print a ticket.
      * Update the total collected and
@@ -74,5 +106,13 @@ public class TicketMachine
         total = total + balance;
         // Clear the balance.
         balance = 0;
+    }
+    
+    /**
+     * Devuelve el total recaudado
+     */
+    public int getTotal()
+    {
+        return total;
     }
 }
