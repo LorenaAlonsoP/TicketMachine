@@ -43,6 +43,14 @@ public class TicketMachine
     }
     
     /**
+     * Añade un método llamado vaciar que simule el proceso de extraer todo el dinero.
+     */
+    public void vaciar()
+    {
+        total = 0;
+    }
+    
+    /**
      * Return the price of a ticket.
      */
     public int getPrice()
